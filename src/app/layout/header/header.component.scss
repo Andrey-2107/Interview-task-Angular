@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #1C2331;
+
+  .logo {
+    color: #fff;
+  }
+
+  .nav-link {
+    margin-left: 7px;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: solid 2px transparent;
+    transition: 0.3s;
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+  }
+}

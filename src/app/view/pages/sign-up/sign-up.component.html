@@ -1,0 +1,53 @@
+<div class="mt-5 mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Registration</h4>
+            <form name="form" class="d-flex flex-column"
+                  #mainForm="ngForm"
+                  (ngSubmit)="onSubmit()"
+                  [formGroup]="myForm">
+              <input type="text" name="name"
+                     class="form-control mt-1" placeholder="Name"
+                     formControlName="name"
+              >
+
+              <div class="alert alert-danger mt-1"
+                   *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched">
+                Не указано имя
+              </div>
+
+              <input type="email" name="email"
+                     class="form-control mt-1" placeholder="Email"
+                     formControlName="email" [(ngModel)]="email"
+              >
+
+              <div class="alert alert-danger mt-1"
+                   *ngIf="myForm.controls['email'].invalid && myForm.controls['email'].touched"
+              >
+                Некорректный email
+              </div>
+
+              <input type="password" name="password"
+                     class="form-control mt-1" placeholder="Password"
+                     formControlName="password" [(ngModel)]="password"
+              >
+
+              <div class="alert alert-danger mt-1"
+                   *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched">
+                Не указан пароль
+              </div>
+              <button type="submit" class="btn btn-primary mt-3"
+                      [disabled]="myForm.invalid" (click)="signUp()"
+              >
+                Sign Up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

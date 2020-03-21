@@ -17,5 +17,4 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.state = this.auth.loggedInSource
   }
-
 }

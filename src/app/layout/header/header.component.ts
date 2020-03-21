@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
- state: Observable<boolean>;
+  state: Observable<boolean>;
 
   constructor(
     private auth: AuthService

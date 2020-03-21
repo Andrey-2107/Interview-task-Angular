@@ -6,7 +6,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { RouterModule } from "@angular/router";
 import { ViewModule } from "../view/view.module";
 
-
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, LayoutComponent],
   imports: [
@@ -19,4 +18,5 @@ import { ViewModule } from "../view/view.module";
     HeaderComponent, FooterComponent, LayoutComponent
   ]
 })
-export class LayoutModule { }
+export class LayoutModule {
+}

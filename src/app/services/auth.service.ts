@@ -41,11 +41,9 @@ export class AuthService {
   }
 
   async tryRegister(email: string, password: string) {
-     try {
-     await this.register(email, password);
-    }
-
-    catch (exeption) {
+    try {
+      await this.register(email, password);
+    } catch (exeption) {
       alert(exeption.message);
     }
   }
